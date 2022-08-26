@@ -42,6 +42,7 @@
 }
 .screen-wrapper-input > input:focus,
 .screen-wrapper-input > input:hover {
+	outline: none;
 	box-shadow: 0 0 0 1px grey;
 }
 .screen-wrapper-button {

@@ -1,12 +1,16 @@
 import React from "react";
+import { useNavigate } from  "react-router-dom"
 import "./Join.css";
 
 function Join() {
+  const navigate = useNavigate();
+  
   const handleJoin = (e) => {
     console.log("func called");
 		/**
 		 * TODO: (1) generate uuid (2) store info in local storage (3) navigate to all rooms page
 		 */
+    navigate("/list");
 	};
 	return (
 		<>
