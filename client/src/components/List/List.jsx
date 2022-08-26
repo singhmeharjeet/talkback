@@ -39,6 +39,21 @@ function Join() {
 				</div>
 				<div className="AppGlass">
 					<h1 className="list-title">Create Chambers!</h1>
+					<input type="text" />
+					<input 
+						type="radio"
+						name="position-radio-btn"
+						value="Opposition"
+						// checked={isRadioSelected("Opposition")}
+						// onChange={handleRadioClick}
+					/>
+					<input 
+						type="radio"
+						name="position-radio-btn"
+						value="Affirmative"
+						// checked={isRadioSelected("Affirmative")}
+						// onChange={handleRadioClick}
+					/>
 				</div>
 			</div>
 		</>
