@@ -29,6 +29,7 @@
 	justify-content: center;
 }
 .screen-wrapper-input {
+	position: relative;
 	width: 30vw;
 }
 .screen-wrapper-input > input {
@@ -40,6 +41,12 @@
 	color: #fff;
 	border-radius: 0.7em;
 }
+
+.screen-wrapper-input > input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: white;
+	opacity: 1; /* Firefox */
+}
+
 .screen-wrapper-input > input:focus,
 .screen-wrapper-input > input:hover {
 	outline: none;
@@ -62,4 +69,11 @@
 .screen-wrapper-button > button:hover {
 	background-color: grey;
 	color: #fff;
+}
+
+.errormsg-home{
+	color: rgba(255, 255, 255, 0.6);
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 5px;
 }

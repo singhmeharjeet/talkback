@@ -1,4 +1,5 @@
 import React from "react";
+import { getLocalStorage } from "../utils";
 import "./List.css";
 
 function Join() {
@@ -6,7 +7,7 @@ function Join() {
 		<>
 			<div className="list-wrapper">
 				<div className="AppGlass">
-					<h1 className="list-title">Join a chamber now!</h1>
+					<h1 className="list-title">Hey, {getLocalStorage().username}.<br/>Join a chamber now!</h1>
 
 					<div className="list-search">
 						<input type="text" placeholder="Search Topic..." />
