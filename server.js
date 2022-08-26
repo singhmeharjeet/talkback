@@ -37,6 +37,14 @@ const test = io.on('connection', socket => {
 })
  
 /**
+ * Routes
+ */
+
+app.use("/home", (req, res) => {
+	res.send({ msg: "Hello" });
+});
+
+/**
  * Listening
  */
 app.listen(PORT, () => console.log(`Sever running on ${PORT}`)); 
