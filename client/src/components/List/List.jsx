@@ -6,6 +6,7 @@ function Join() {
 	return (
 		<>
 			<div className="list-wrapper">
+				<img className=""></img>
 				<div className="AppGlass">
 					<h1 className="list-title">Hey, {getLocalStorage().username}.<br/>Join a chamber now!</h1>
 
@@ -35,6 +36,111 @@ function Join() {
 								</tr>
 							</thead>
 							<tbody>
+								<tr>
+									<td
+										style={{
+											width: "90%",
+											overflowY: "scroll",
+										}}
+									>
+										This is a templated version of the
+										motion
+									</td>
+									<td
+										style={{
+											display: "flex",
+											justifyContent: "center",
+										}}
+									>
+										<button className="list-enter">
+											Enter
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td
+										style={{
+											width: "90%",
+											overflowY: "scroll",
+										}}
+									>
+										This is a templated version of the
+										motion
+									</td>
+									<td
+										style={{
+											display: "flex",
+											justifyContent: "center",
+										}}
+									>
+										<button className="list-enter">
+											Enter
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td
+										style={{
+											width: "90%",
+											overflowY: "scroll",
+										}}
+									>
+										This is a templated version of the
+										motion
+									</td>
+									<td
+										style={{
+											display: "flex",
+											justifyContent: "center",
+										}}
+									>
+										<button className="list-enter">
+											Enter
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td
+										style={{
+											width: "90%",
+											overflowY: "scroll",
+										}}
+									>
+										This is a templated version of the
+										motion
+									</td>
+									<td
+										style={{
+											display: "flex",
+											justifyContent: "center",
+										}}
+									>
+										<button className="list-enter">
+											Enter
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td
+										style={{
+											width: "90%",
+											overflowY: "scroll",
+										}}
+									>
+										This is a templated version of the
+										motion
+									</td>
+									<td
+										style={{
+											display: "flex",
+											justifyContent: "center",
+										}}
+									>
+										<button className="list-enter">
+											Enter
+										</button>
+									</td>
+								</tr>
 								<tr>
 									<td
 										style={{
