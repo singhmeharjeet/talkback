@@ -1,0 +1,64 @@
+.screen-wrapper {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../../../public/debate-home-pic.png);
+	background-size: cover;
+	background-position: center top;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+}
+.screen-wrapper-title {
+	color: white;
+	font-size: 2.5em;
+	width: 30vw;
+	height: auto;
+	margin-bottom: 0em;
+	font-family: "Anton", sans-serif;
+	word-spacing: 2px;
+	letter-spacing: 1px;
+	font-weight: lighter;
+}
+.screen-wrapper-sub-title {
+	color: rgba(255, 255, 255, 0.871);
+	font-size: 1em;
+	width: 30vw;
+	display: flex;
+	justify-content: center;
+}
+.screen-wrapper-input {
+	width: 30vw;
+}
+.screen-wrapper-input > input {
+	width: 100%;
+	outline: none;
+	padding: 0.7rem;
+	border: none;
+	background-color: rgba(255, 253, 253, 0.25);
+	color: #fff;
+	border-radius: 0.7em;
+}
+.screen-wrapper-input > input:focus,
+.screen-wrapper-input > input:hover {
+	box-shadow: 0 0 0 1px grey;
+}
+.screen-wrapper-button {
+	width: 30vw;
+	display: flex;
+	justify-content: flex-end;
+}
+.screen-wrapper-button > button {
+	outline: none;
+	padding: 0.7rem;
+	border: none;
+	background-color: rgba(255, 253, 253, 0);
+	color: rgba(255, 255, 255, 0.6);
+	border-radius: 0.7em;
+	transition: all 0.3s ease-in-out;
+}
+.screen-wrapper-button > button:hover {
+	background-color: grey;
+	color: #fff;
+}
