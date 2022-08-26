@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	transition: all 0.2s ease-out;
+}

@@ -1,0 +1,116 @@
+.list-wrapper {
+	/* background: linear-gradient(
+		106.37deg,
+		#100F11 29.63%,
+		#363239 51.55%,
+		#403c44 90.85%
+	); */
+	background-color: #100F11;
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 1em;
+	justify-content: center;
+	align-items: center;
+}
+.AppGlass {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1.5em;
+	width: 90%;
+	height: 70vh;
+	border-radius: 2rem;
+    margin: 1em;
+	background-color: rgba(255, 255, 255, 0.307);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.list-title {
+	text-align: center;
+	padding: 0.5em;
+	margin-top: 0.5em;
+	color: white;
+}
+.list-search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 30%;
+}
+
+.list-search > input {
+	width: 100%;
+	outline: none;
+	padding: 0.7rem;
+	border: none;
+	background-color: rgba(255, 253, 253, 0.5);
+	color: white;
+	border-radius: 0.7em;
+}
+.list-search > input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: white;
+	opacity: 1; /* Firefox */
+  }
+.list-search > input:hover,
+.list-search > input:focus {
+	outline: none;
+	box-shadow: 0 0 0 1px grey;
+}
+
+.list-create-chamber > button {
+	outline: none;
+	padding: 0.7rem;
+	border: none;
+	background-color: rgba(255, 253, 253, 0);
+	color: rgba(255, 255, 255, 0.6);
+	border-radius: 0.7em;
+	transition: all 0.3s ease-in-out;
+}
+
+.list-create-chamber > button:hover {
+	background-color: grey;
+	color: #fff;
+}
+
+.list-motion-table {
+	width: 80%;
+}
+
+table {
+	margin-bottom: 100;
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+table th,
+table td {
+	padding: 8px;
+	text-align: left;
+}
+table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+table tr:hover {
+	background-color: rgba(221, 221, 221, 0.3);
+    color: white;
+}
+table th:hover {
+    background-color: none;
+}
+table tr {
+	color: white;
+    overflow: hidden;
+    border-bottom: 1px solid white;
+}
+.list-enter {
+	padding: 4px 8px;
+	font-size: 12px;
+	outline: none;
+	border: 1px solid grey;
+}
+.list-enter:hover,
+.list-enter:focus {
+	background-color: rgba(0, 0, 0, 0.181);
+	color: white;
+}
