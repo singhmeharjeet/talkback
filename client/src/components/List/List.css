@@ -5,7 +5,7 @@
 		#363239 51.55%,
 		#403c44 90.85%
 	); */
-	background-color: #100F11;
+	background-color: #202225;
 	display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -23,8 +23,9 @@
 	height: 70vh;
 	border-radius: 2rem;
     margin: 1em;
-	background-color: rgba(255, 255, 255, 0.307);
+	background-color: #40434a;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	overflow-y: scroll;
 }
 .list-title {
 	text-align: center;
