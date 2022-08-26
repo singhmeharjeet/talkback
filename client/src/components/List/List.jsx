@@ -12,9 +12,9 @@ function Join() {
 						<input type="text" placeholder="Search Topic..." />
 					</div>
 
-					<div className="list-create-chamber">
+					{/* <div className="list-create-chamber">
 						<button>Create My Own Chamber</button>
-					</div>
+					</div> */}
 
 					<div className="list-motion-table">
 						<table>
@@ -28,12 +28,17 @@ function Join() {
 								<tr>
 									<td></td>
 									<td>
-										<button className="list-enter">Enter</button>
+										<button className="list-enter">
+											Enter
+										</button>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
+				</div>
+				<div className="AppGlass">
+					<h1 className="list-title">Create Chambers!</h1>
 				</div>
 			</div>
 		</>
