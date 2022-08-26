@@ -11,26 +11,25 @@ function Join() {
   const[errormsg, seterrormsg] = useState('');
 
   const handleJoin = (e) => {
-	console.log(userid);
-	console.log(username);
-		/**
-		 * (2) store info in local storage 
-		 * - user id
-		 * - username
-		 * 
-		 * (3) navigate to all rooms page (add if statement) if name is empty do not 
-		 * navigate
-		 */
 		if(username){
 			setLocalStorage({userid, username});
-			console.log(getLocalStorage())
 			navigate("/list");
 		}else{
 			seterrormsg('Name is Required!');
 			setTimeout( () => seterrormsg(''), 3000 );
 		}
-		
 	};
+
+	const handleCreate = (e) => {
+		if(username){
+			setLocalStorage({userid, username});
+			navigate("/create");
+		}else{
+			seterrormsg('Name is Required!');
+			setTimeout( () => seterrormsg(''), 3000 );
+		}
+	};
+
 	return (
 		<>
 
@@ -56,7 +55,10 @@ function Join() {
 				</div>
 				<div className="screen-wrapper-button">
 					<button type="button" onClick= {handleJoin} >
-						Join Debate
+						Join A Debate
+					</button>
+					<button type="button" onClick= {handleCreate} >
+						Create A Debate
 					</button>
 				</div>
 			</div>

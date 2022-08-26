@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css"
 import Join from "./components/Join/Join.jsx"
 import List from "./components/List/List.jsx"
+import Create from "./components/Create/Create.jsx"
 function App() {
 	return (
 		<>
@@ -11,6 +12,7 @@ function App() {
 					<Route path="/" element={<Join />} />
 					<Route path="/join" element={<Join />} />
 					<Route path="/list" element={<List />} />
+					<Route path="/create" element={<Create />} />
 				</Routes>
 			</BrowserRouter>
 		</>
