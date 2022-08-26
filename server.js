@@ -25,7 +25,17 @@ app.get('/:room', (req, res) => {
     res.render('room', { roomId: req.params.room } )
 })
 
+const test = io.on('connection', socket => {
+    socket.on('join-room', (roomId, userId) => {
+        socket.join(roomId)
+        socket.join(roomId).broadcast.emit('uset-connected',userId)
+    })
 
+    socket.on('disconnect', ()=>{
+        socket.to(roomId).broadcast.emit('user-disconnected', userId)
+    })
+})
+ 
 /**
  * Listening
  */
