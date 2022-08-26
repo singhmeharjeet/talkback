@@ -14,6 +14,14 @@ app.use(express.static("public/build")); // for pushing onto heroku
 app.use(express.static("public")); // for pushing onto heroku
 
 /**
+ * Routes
+ */
+
+app.use("/home", (req, res) => {
+	res.send({ msg: "Hello" });
+});
+
+/**
  * Listening
  */
-app.listen(PORT, () => `Sever running on ${PORT}`);
+app.listen(PORT, () => console.log(`Sever running on ${PORT}`));
