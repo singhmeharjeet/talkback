@@ -19,15 +19,37 @@ function Join() {
 					<div className="list-motion-table">
 						<table>
 							<thead>
-								<tr>
+								<tr
+									style={{ backgroundColor: "rgba(0,0,0,0)" }}
+								>
 									<th>Chamber(s) Available</th>
-									<th>Actions</th>
+									<th
+										style={{
+											display: "flex",
+											justifyContent: "center",
+										}}
+									>
+										Actions
+									</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td></td>
-									<td>
+									<td
+										style={{
+											width: "90%",
+											overflowY: "scroll",
+										}}
+									>
+										This is a templated version of the
+										motion
+									</td>
+									<td
+										style={{
+											display: "flex",
+											justifyContent: "center",
+										}}
+									>
 										<button className="list-enter">
 											Enter
 										</button>
@@ -37,7 +59,7 @@ function Join() {
 						</table>
 					</div>
 				</div>
-				<div className="AppGlass">
+				<div className="AppGlass" style={{ height: "auto" }}>
 					<h1 className="list-title">Create Chambers!</h1>
 				</div>
 			</div>

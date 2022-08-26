@@ -6,7 +6,6 @@
 		#403c44 90.85%
 	); */
 	background-color: #100F11;
-	height: 100vh;
 	display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -86,7 +85,6 @@ table {
 }
 table th,
 table td {
-	border-bottom: 1px solid #ddd;
 	padding: 8px;
 	text-align: left;
 }
@@ -94,13 +92,16 @@ table tr:nth-child(even) {
 	background-color: #f2f2f2;
 }
 table tr:hover {
-	background-color: #ddd;
+	background-color: rgba(221, 221, 221, 0.3);
+    color: white;
+}
+table th:hover {
+    background-color: none;
 }
 table tr {
-	padding-top: 12px;
-	padding-bottom: 12px;
-	text-align: left;
 	color: white;
+    overflow: hidden;
+    border-bottom: 1px solid white;
 }
 .list-enter {
 	padding: 4px 8px;
