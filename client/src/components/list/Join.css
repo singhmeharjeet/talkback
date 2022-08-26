@@ -1,0 +1,79 @@
+.TitleContent{
+    background: linear-gradient(
+        106.37deg,
+        #ffe1bc 29.63%,
+        #ffcfd1 51.55%,
+        #f3c6f1 90.85%
+    );
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AppGlass{
+    display: grid;
+    height: 97%;
+    width: 97%;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.54);
+
+}
+.Title{ 
+    margin-top: 80px; 
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Search {
+    margin-bottom: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.CreateChamber {
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.Search input {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.MotionTable {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table{
+    margin-bottom: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+table th,
+table td{
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+table tr:nth-child(even)
+{background-color: #f2f2f2;}
+table tr:hover {background-color: #ddd;}
+table tr {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: black;
+}
+button{
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-right: 2px;
+}
