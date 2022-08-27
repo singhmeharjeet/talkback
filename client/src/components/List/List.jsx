@@ -47,20 +47,27 @@ const dataFromDataBase = [
 	},
 ];
 
+
 function Join() {
 	const [search, setSearch] = useState("");
 	const [filteredData, setFilteredData] = useState(dataFromDataBase);
 
-	useEffect(() => {
-		console.log("search", search);
-		// setFilteredData(
-		// 	dataFromDataBase.reduce((acc, cv) => {
-		// 		if (search && cv.title.includes(search)) {
-		// 			acc.push(cv);
-		// 		}
-		// 	})
-		// );
-	}, [search]);
+	//const keys = ["title"];
+
+	// const query = (data) => {
+	// return data.filter((dataFromDataBase) => 
+	// 		dataFromDataBase.title.toLowerCase().includes(search));
+	// };
+	//console.log(query);
+
+	// useEffect(() => {
+	// console.log("search", search);
+	// 	const query = (data) => {
+	// 	return data.filter((dataFromDataBase) => 
+	// 			dataFromDataBase.title.toLowerCase().includes(search));
+	// 	};
+	// setFilteredData();
+	// }, [search]);
 
 	function handleEnter(url) {
 		console.log(url);
@@ -81,8 +88,7 @@ function Join() {
 							type="text"
 							placeholder="Search Topic..."
 							onChange={(e) => {
-								setSearch(e.target.value);
-							}}
+								setSearch(e.target.value.toLowerCase());}}
 						/>
 					</div>
 
@@ -102,7 +108,8 @@ function Join() {
 							</thead>
 							<tbody>
 								{filteredData.length != 0 ? (
-									filteredData.map((room, id) => {
+									filteredData.filter((room) => room.title.toLowerCase().includes(search))
+									.map((room, id) => {
 										return (
 											<tr key={id}>
 												<td>{room.title}</td>
