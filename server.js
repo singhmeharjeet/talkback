@@ -3,7 +3,12 @@ const cors = require("cors");
 
 const app = express();
 const server = require('http').Server(app) // server for socket io
-const io = require('socket.io')(server)
+const io = require('socket.io')(server, {
+	cors: {
+		origin: "*",
+		method: ["GET", "POST"]
+	}
+})
 const { v4: uuidV4 } = require('uuid')
 const PORT = process.env.PORT || 5100;  
 
@@ -40,11 +45,11 @@ const test = io.on('connection', socket => {
  * Routes
  */
 
-app.use("/home", (req, res) => {
-	res.send({ msg: "Hello" });
+app.use("/", (req, res) => {
+	res.send({ msg: "Server is Running" });
 });
 
 /**
  * Listening
  */
-app.listen(PORT, () => console.log(`Sever running on ${PORT}`)); 
+server.listen(PORT, () => console.log(`Sever running on ${PORT}`)); 
