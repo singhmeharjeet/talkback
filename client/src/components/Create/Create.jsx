@@ -56,13 +56,9 @@ function Create() {
                         />Affirmative
                         </label>
 					</div>
-<<<<<<< HEAD
-                    <button onClick={handleCreate}>Create Chamber</button>
-=======
                     <div className="create-btn-wrapper">
-                    <button className="Create-btn">Create Chamber</button>
+                    <button className="Create-btn" onClick={handleCreate}>Create Chamber</button>
                     </div>
->>>>>>> 8db93b94a0676c888c4b201bb26aa8f6b17b69c6
                 </form>
                 
             </div>
