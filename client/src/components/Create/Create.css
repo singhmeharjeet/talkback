@@ -1,0 +1,92 @@
+.create-wrapper {
+	/* background: linear-gradient(
+		106.37deg,
+		#100F11 29.63%,
+		#363239 51.55%,
+		#403c44 90.85%
+	); */
+	background-color: #202225;
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 1em;
+	justify-content: center;
+	align-items: center;
+}
+
+.create-title {
+	text-align: center;
+	padding-top: 0.5em;
+	margin-top: 0.5em;
+	color: white;
+}
+.create-motion {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+    margin-right: 100px;
+}
+.motion-form {
+    padding: 1em;
+}
+.create-motion > input {
+	width: 100%;
+	outline: none;
+	padding: 0.7rem;
+	border: none;
+	background-color: rgba(255, 253, 253, 0.5);
+	color: white;
+	border-radius: 0.7em;
+}
+.create-btn-wrapper {
+    display: flex;
+    width: 30vw;
+    justify-content: flex-end;
+}
+.create-motion > input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: white;
+	opacity: 1; /* Firefox */
+  }
+.create-motion > input:hover,
+.create-motion > input:focus {
+	outline: none;
+	box-shadow: 0 0 0 1px grey;
+}
+.Opp-btn {
+    color: #fff;
+    padding: 1rem;
+}
+.Aff-btn {
+    color: #fff;
+}
+.position-buttons {
+    padding: 1em;
+}
+
+.Create-btn > button {
+	outline: none;
+	padding: 0.7rem;
+	border: none;
+	background-color: rgba(255, 253, 253, 0);
+	color: rgba(255, 255, 255, 0.6);
+	border-radius: 0.7em;
+	transition: all 0.3s ease-in-out;
+}
+
+.Create-btn > button:hover {
+	background-color: grey;
+	color: rgba(255, 255, 255, 0.512);
+} 
+
+.Create-btn {
+	padding: 4px 8px;
+	font-size: 12px;
+	outline: none;
+	border: 1px solid grey;
+}
+.Create-btn:hover,
+.Create-btn:focus {
+	background-color: rgba(0, 0, 0, 0.181);
+	color: white;
+}
