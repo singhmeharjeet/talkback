@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getLocalStorage } from "../utils";
 import "./List.css";
 
@@ -51,7 +51,8 @@ function Join() {
 	const [search, setSearch] = useState("");
 	const [filteredData, setFilteredData] = useState(dataFromDataBase);
 
-	function filterData() {
+	useEffect(() => {
+		console.log("search", search);
 		// setFilteredData(
 		// 	dataFromDataBase.reduce((acc, cv) => {
 		// 		if (search && cv.title.includes(search)) {
@@ -59,7 +60,8 @@ function Join() {
 		// 		}
 		// 	})
 		// );
-	}
+	}, [search]);
+
 	function handleEnter(url) {
 		console.log(url);
 		return;
@@ -80,7 +82,6 @@ function Join() {
 							placeholder="Search Topic..."
 							onChange={(e) => {
 								setSearch(e.target.value);
-								filterData();
 							}}
 						/>
 					</div>
