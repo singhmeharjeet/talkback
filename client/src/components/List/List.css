@@ -7,9 +7,9 @@
 	); */
 	background-color: #202225;
 	display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    gap: 1em;
+	flex-direction: column;
+	min-height: 100vh;
+	gap: 1em;
 	justify-content: center;
 	align-items: center;
 }
@@ -20,9 +20,9 @@
 	align-items: center;
 	gap: 1.5em;
 	width: 90%;
-	height: 70vh;
-	border-radius: 2rem;
-    margin: 1em;
+	height: 80vh;
+	border-radius: 0.7em;
+	margin: 1em;
 	background-color: #40434a;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	overflow-y: scroll;
@@ -37,7 +37,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    width: 30%;
+	width: 30%;
 }
 
 .list-search > input {
@@ -49,10 +49,11 @@
 	color: white;
 	border-radius: 0.7em;
 }
-.list-search > input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.list-search > input::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: white;
 	opacity: 1; /* Firefox */
-  }
+}
 .list-search > input:hover,
 .list-search > input:focus {
 	outline: none;
@@ -80,29 +81,50 @@
 
 table {
 	margin-bottom: 100;
-	font-family: Arial, Helvetica, sans-serif;
 	border-collapse: collapse;
+    border-style: solid;
 	width: 100%;
+    border: none;
+}
+table th {
+    margin-bottom: 0.5em;
 }
 table th,
 table td {
-	padding: 8px;
-	text-align: left;
+    width: fit-content;
+    padding: 0.4em;
+    display: flex;
+    align-items: center;
 }
-table tr:nth-child(even) {
-	background-color: #f2f2f2;
+
+table tr:nth-child(odd) {
+	background-color: #202225a9;
 }
+th:first-child,
+td:first-child {
+    text-align: left;
+    padding-left: 1em;
+    overflow-X: scroll;
+    flex-grow: 1;
+}
+th:last-child,
+td:last-child {
+    padding-right: 1em;
+}
+
 table tr:hover {
-	background-color: rgba(221, 221, 221, 0.3);
-    color: white;
+	/* background-color: rgba(221, 221, 221, 0.3); */
+	color: white;
 }
 table th:hover {
-    background-color: none;
+	background-color: none;
 }
 table tr {
 	color: white;
-    overflow: hidden;
-    border-bottom: 1px solid white;
+	overflow: hidden;
+    display: flex;
+    gap: 1em;
+	/* border-bottom: 1px solid white; */
 }
 .list-enter {
 	padding: 4px 8px;
@@ -114,4 +136,23 @@ table tr {
 .list-enter:focus {
 	background-color: rgba(0, 0, 0, 0.181);
 	color: white;
+}
+.screen-wrapper-button2 {
+	width: fit-content;
+	display: flex;
+	justify-content: flex-end;
+	gap: 1em;
+}
+.screen-wrapper-button2 > button {
+	outline: none;
+	padding: 0.5rem 1rem;
+	border: none;
+	background-color: rgba(255, 253, 253, 0);
+	color: rgba(255, 255, 255, 0.6);
+	border-radius: 0.2em;
+	transition: all 0.1s ease-in-out;
+}
+.screen-wrapper-button2 > button:hover {
+	background-color: grey;
+	color: #fff;
 }

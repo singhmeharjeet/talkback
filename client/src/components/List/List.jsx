@@ -8,7 +8,10 @@ function Join() {
 			<div className="list-wrapper">
 				<img className=""></img>
 				<div className="AppGlass">
-					<h1 className="list-title">Hey, {getLocalStorage().username}.<br/>Join a chamber now!</h1>
+					<h1 className="list-title">
+						Hey, {getLocalStorage().username}.<br />
+						Join a chamber now!
+					</h1>
 
 					<div className="list-search">
 						<input type="text" placeholder="Search Topic..." />
@@ -25,141 +28,86 @@ function Join() {
 									style={{ backgroundColor: "rgba(0,0,0,0)" }}
 								>
 									<th>Chamber(s) Available</th>
-									<th
-										style={{
-											display: "flex",
-											justifyContent: "center",
-										}}
-									>
-										Actions
-									</th>
+									<th></th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td
-										style={{
-											width: "90%",
-											overflowY: "scroll",
-										}}
-									>
+									<td>
 										This is a templated version of the
 										motion
 									</td>
-									<td
-										style={{
-											display: "flex",
-											justifyContent: "center",
-										}}
-									>
-										<button className="list-enter">
-											Enter
-										</button>
+									<td>
+										<div className="screen-wrapper-button2">
+											<button className="list-enter">
+												Enter
+											</button>
+										</div>
 									</td>
 								</tr>
 								<tr>
-									<td
-										style={{
-											width: "90%",
-											overflowY: "scroll",
-										}}
-									>
+									<td>
 										This is a templated version of the
 										motion
 									</td>
-									<td
-										style={{
-											display: "flex",
-											justifyContent: "center",
-										}}
-									>
-										<button className="list-enter">
-											Enter
-										</button>
+									<td>
+										<div className="screen-wrapper-button2">
+											<button className="list-enter">
+												Enter
+											</button>
+										</div>
 									</td>
 								</tr>
 								<tr>
-									<td
-										style={{
-											width: "90%",
-											overflowY: "scroll",
-										}}
-									>
+									<td>
 										This is a templated version of the
 										motion
 									</td>
-									<td
-										style={{
-											display: "flex",
-											justifyContent: "center",
-										}}
-									>
-										<button className="list-enter">
-											Enter
-										</button>
+									<td>
+										<div className="screen-wrapper-button2">
+											<button className="list-enter">
+												Enter
+											</button>
+										</div>
 									</td>
 								</tr>
 								<tr>
-									<td
-										style={{
-											width: "90%",
-											overflowY: "scroll",
-										}}
-									>
+									<td>
 										This is a templated version of the
 										motion
 									</td>
-									<td
-										style={{
-											display: "flex",
-											justifyContent: "center",
-										}}
-									>
-										<button className="list-enter">
-											Enter
-										</button>
+									<td>
+										<div className="screen-wrapper-button2">
+											<button className="list-enter">
+												Enter
+											</button>
+										</div>
 									</td>
 								</tr>
 								<tr>
-									<td
-										style={{
-											width: "90%",
-											overflowY: "scroll",
-										}}
-									>
+									<td>
 										This is a templated version of the
 										motion
 									</td>
-									<td
-										style={{
-											display: "flex",
-											justifyContent: "center",
-										}}
-									>
-										<button className="list-enter">
-											Enter
-										</button>
+									<td>
+										<div className="screen-wrapper-button2">
+											<button className="list-enter">
+												Enter
+											</button>
+										</div>
 									</td>
 								</tr>
 								<tr>
-									<td
-										style={{
-											width: "90%",
-											overflowY: "scroll",
-										}}
-									>
+									<td>
 										This is a templated version of the
 										motion
 									</td>
-									<td
-										style={{
-											display: "flex",
-											justifyContent: "center",
-										}}
-									>
-										<button className="list-enter">
-											Enter
-										</button>
+									<td>
+										<div className="screen-wrapper-button2">
+											<button className="list-enter">
+												Enter
+											</button>
+										</div>
 									</td>
 								</tr>
 							</tbody>
