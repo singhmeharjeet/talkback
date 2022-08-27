@@ -1,6 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { createContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { getLocalStorage } from "../utils";
+import io from 'socket.io-client'
 import "./Create.css";
 
 function Create() {
@@ -20,6 +21,11 @@ function Create() {
         e.preventDefault();
     }
 
+    function handleCreate({roomId, children}){
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        const socketContext = createContext
+        const socket = io('http://localhost:5100')
+    }
 
   return (
     <>
@@ -51,7 +57,7 @@ function Create() {
                         </label>
                         
 					</div>
-                    <button>Create Chamber</button>
+                    <button onClick={handleCreate}>Create Chamber</button>
                 </form>
                 
             </div>

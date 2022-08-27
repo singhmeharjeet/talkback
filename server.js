@@ -22,7 +22,7 @@ app.use(express.static("public")); // for pushing onto heroku
  */
 
 app.use("/home", (req, res) => {
-	res.send({ msg: "Hello", roomId:uuidV4() });
+    res.send({ msg: "Hello", roomId:uuidV4() });
 });
 
 app.get('/', (req, res) => {
@@ -30,11 +30,12 @@ app.get('/', (req, res) => {
 })
 
 app.get('/room:room', (req, res) => {
-    res.render('room', { roomId: req.params.room } )
+    res.render('room', { roomId:uuidV4() } )
 })
 
 // socket io connection
 io.on('connection', socket => {
+    socket.emit('myId',uuidV4())
     socket.on('join-room', (roomId, userId) => {
         socket.join(roomId)
         socket.join(roomId).broadcast.emit('user-connected',userId)
