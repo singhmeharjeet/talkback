@@ -1,8 +1,41 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { getLocalStorage } from "../utils";
+import { BASE_URL } from "../../components/constants";
 import "./List.css";
 
-function Join() {
+
+async function getData(){
+	try {
+		const responseJSON = await (
+			await fetch(`${BASE_URL}/list`, {
+				method: "GET",
+				headers: {
+					"Content-Type": "application/json",
+				},
+			})
+		);
+		console.log("responseJSON: ")
+		console.log(responseJSON);
+
+		if(responseJSON?.status){
+			return responseJSON?.data;
+		}else{
+			console.log(responseJSON?.message)
+		}
+	} catch (error) {
+		console.log("error", error);
+	}
+}
+
+
+function List() {
+	const [chamberList, setChamberList] = useState([]);
+
+	
+	useEffect(() => {setChamberList(getData());
+		console.log(chamberList)}, []) 
+
+	
 	return (
 		<>
 			<div className="list-wrapper">
@@ -171,4 +204,4 @@ function Join() {
 	);
 }
 
-export default Join;
+export default List;
