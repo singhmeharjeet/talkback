@@ -1,11 +1,14 @@
-import React, { createContext } from "react";
+import React from "react";
 import { useState, useContext, useEffect } from "react";
 import { getLocalStorage } from "../utils";
 import io from 'socket.io-client'
+import {v4 as uuidv4} from "uuid";
 import "./Create.css";
 
-function Create() {
+
+function Create({socket}) {
     const [motion, setMotion] = useState('');
+
 
     const onChange = (e) => {
         const { value } = e.target;
@@ -21,10 +24,11 @@ function Create() {
         e.preventDefault();
     }
 
-    function handleCreate({roomId, children}){
+    function handleCreate(){
         // eslint-disable-next-line react-hooks/rules-of-hooks
-        const socketContext = createContext
-        const socket = io('http://localhost:5100')
+        console.log(socket) 
+        socket.emit('join-room',socket) // 2nd for room id and 3rd for user name
+        
     }
 
   return (

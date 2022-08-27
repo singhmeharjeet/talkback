@@ -3,7 +3,12 @@ const cors = require("cors");
 
 const app = express();
 const server = require('http').Server(app) // server for socket io
-const io = require('socket.io')(server)
+const io = require('socket.io')(server,{
+        cors: {
+            origin: "*",
+            methods: ["GET", "POST"]
+        }
+    })
 const { v4: uuidV4 } = require('uuid')
 const PORT = process.env.PORT || 5100;  
 
@@ -14,7 +19,7 @@ app.use(cors()); // Handles cross orign request errors.
 app.use(express.json()); //	Converts the request body into json object from string
 app.use(express.urlencoded({ extended: true })); // Understand fetch requests
 app.use(express.static("public/build")); // for pushing onto heroku
-app.use(express.static("public")); // for pushing onto heroku
+app.use(express.static("public")); // for pushing onto herokux
 
 
 /**
@@ -22,28 +27,33 @@ app.use(express.static("public")); // for pushing onto heroku
  */
 
 app.use("/home", (req, res) => {
-    res.send({ msg: "Hello", roomId:uuidV4() });
+    res.send({ msg: "Hello", roomId: uuidV4() });
 });
 
 app.get('/', (req, res) => {
-    res.redirect(`/home`)
+    res.redirect(`/${uuidV4()}`)
 })
 
-app.get('/room:room', (req, res) => {
-    res.render('room', { roomId:uuidV4() } )
+app.get('/:room', (req, res) => {
+    res.render('/', { roomId:req.params.room } )
 })
 
-// socket io connection
+
 io.on('connection', socket => {
-    socket.emit('myId',uuidV4())
+    socket.emit('me', socket.id)
+
     socket.on('join-room', (roomId, userId) => {
         socket.join(roomId)
-        socket.join(roomId).broadcast.emit('user-connected',userId)
+        socket.broadcast.to(roomId).emit("user-connected", userId);
+
+        console.log(roomId,userId);
+       socket.on('disconnect', ()=>{
+            socket.to(roomId).broadcast.emit('user-disconnected', userId)
+        }) 
     })
 
-    socket.on('disconnect', ()=>{
-        socket.to(roomId).broadcast.emit('user-disconnected', userId)
-    })
+
+ 
 })
  
 
@@ -51,4 +61,6 @@ io.on('connection', socket => {
 /**
  * Listening
  */
-app.listen(PORT, () => console.log(`Sever running on ${PORT}`)); 
+server.listen(PORT, () =>{ 
+    console.log(`Sever running on ${PORT}`)
+}); 
