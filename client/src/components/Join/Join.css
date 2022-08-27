@@ -20,6 +20,8 @@
 	word-spacing: 2px;
 	letter-spacing: 1px;
 	font-weight: lighter;
+	display: flex;
+	justify-content: center;
 }
 .screen-wrapper-sub-title {
 	color: rgba(255, 255, 255, 0.871);
@@ -42,7 +44,8 @@
 	border-radius: 0.7em;
 }
 
-.screen-wrapper-input > input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.screen-wrapper-input > input::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: white;
 	opacity: 1; /* Firefox */
 }
@@ -56,6 +59,7 @@
 	width: 30vw;
 	display: flex;
 	justify-content: flex-end;
+	gap: 1em;
 }
 .screen-wrapper-button > button {
 	outline: none;
@@ -71,9 +75,9 @@
 	color: #fff;
 }
 
-.errormsg-home{
+.errormsg-home {
 	color: rgba(255, 255, 255, 0.6);
 	position: absolute;
-	margin-top: 10px;
-	margin-left: 5px;
+	top: 0;
+	left: 105%;
 }

@@ -40,7 +40,6 @@ app.get('/:room', (req, res) => {
 
 
 io.on('connection', socket => {
-    socket.emit('me', socket.id)
 
     socket.on('join-room', (roomId, userId) => {
         socket.join(roomId)
@@ -56,8 +55,6 @@ io.on('connection', socket => {
  
 })
  
-
-
 /**
  * Listening
  */
