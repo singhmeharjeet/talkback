@@ -47,6 +47,7 @@ const dataFromDataBase = [
 	},
 ];
 
+
 function Join() {
 	const [search, setSearch] = useState("");
 	const [filteredData, setFilteredData] = useState(dataFromDataBase);
@@ -81,8 +82,7 @@ function Join() {
 							type="text"
 							placeholder="Search Topic..."
 							onChange={(e) => {
-								setSearch(e.target.value);
-							}}
+								setSearch(e.target.value.toLowerCase());}}
 						/>
 					</div>
 
@@ -101,9 +101,8 @@ function Join() {
 								</tr>
 							</thead>
 							<tbody>
-								{filteredData.length !== 0 ? (
-									filteredData.filter((room) => room.title.toLowerCase().includes(search))
-									.map((room, id) => {
+								{filteredData.length != 0 ? (
+									filteredData.map((room, id) => {
 										return (
 											<tr key={id}>
 												<td>{room.title}</td>
