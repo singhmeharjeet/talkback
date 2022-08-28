@@ -31,23 +31,24 @@ app.use("/home", (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.redirect(`/${uuidV4()}`)
+    res.redirect(`/create${uuidV4()}`)
 })
 
-app.get('/:room', (req, res) => {
-    res.render('/', { roomId:req.params.room } )
+app.get('/create:create', (req, res) => {
+    res.render('/create', { roomId:req.params.room } )
 })
 
 
 io.on('connection', socket => {
 
-    socket.on('join-room', (roomId, userId) => {
-        socket.join(roomId)
-        socket.broadcast.to(roomId).emit("user-connected", userId);
+    socket.on('join-room', (room) => {
+        socket.join(room.url)
+        socket.broadcast.to(room.url).emit("user-connected", room);
 
-        console.log(roomId,userId);
+        console.log(room.url);
+
        socket.on('disconnect', ()=>{
-            socket.to(roomId).broadcast.emit('user-disconnected', userId)
+             socket.broadcast.to(room.url).emit("user-disconnected", room);
         }) 
     })
 

@@ -17,6 +17,7 @@ function App() {
     setSocket(newSocket);
     return () => newSocket.close();
   }, [setSocket]);
+   	
 	return (
 		<>
 			<BrowserRouter>

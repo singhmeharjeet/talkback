@@ -8,7 +8,9 @@ import "./Create.css";
 
 function Create({socket}) {
     const [motion, setMotion] = useState('');
+    const [ispro, setIspro] = useState(true)
 
+    const userid = getLocalStorage().userid
 
     const onChange = (e) => {
         const { value } = e.target;
@@ -26,8 +28,10 @@ function Create({socket}) {
 
     function handleCreate(){
         // eslint-disable-next-line react-hooks/rules-of-hooks
-        console.log(socket) 
-        socket.emit('join-room',socket) // 2nd for room id and 3rd for user name
+        const room = { url:uuidv4(), title:motion, side:ispro, ownerId:userid }
+        // 2nd for room id and 3rd for room Name 
+        socket.emit('join-room', room)
+        socket.on('userConnected',(Room)=> console.log(Room) )
         
     }
 
@@ -43,11 +47,11 @@ function Create({socket}) {
                     <div className="position-buttons">
                         <label className="Opp-btn">
                         <input 
-                            type="radio"
+                            type="radio" 
                             name="position-radio-btn"
                             value="Opposition"
                             // checked={isRadioSelected("Opposition")}
-                            // onChange={handleRadioClick}
+                            onChange={()=> setIspro(true) }
                         />Opposition
                         </label>
                         <label className="Aff-btn">
@@ -56,7 +60,7 @@ function Create({socket}) {
                             name="position-radio-btn"
                             value="Affirmative"
                             // checked={isRadioSelected("Affirmative")}
-                            // onChange={handleRadioClick}
+                            onChange={()=> setIspro(false)}
                         />Affirmative
                         </label>
 					</div>

@@ -52,7 +52,7 @@ function Join() {
 	const [filteredData, setFilteredData] = useState(dataFromDataBase);
 
 	useEffect(() => {
-		console.log("search", search);
+		// console.log("search", search);
 		// setFilteredData(
 		// 	dataFromDataBase.reduce((acc, cv) => {
 		// 		if (search && cv.title.includes(search)) {
@@ -101,8 +101,9 @@ function Join() {
 								</tr>
 							</thead>
 							<tbody>
-								{filteredData.length != 0 ? (
-									filteredData.map((room, id) => {
+								{filteredData.length !== 0 ? (
+									filteredData.filter((room) => room.title.toLowerCase().includes(search))
+									.map((room, id) => {
 										return (
 											<tr key={id}>
 												<td>{room.title}</td>
